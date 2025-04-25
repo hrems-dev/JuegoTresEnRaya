@@ -23,7 +23,7 @@
                       <TableColumn prefWidth="286.0" text="C2" />
                     </columns>
                   </TableView>
-                  <TextField layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="285.0" AnchorPane.bottomAnchor="477.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="14.0" />
+                  <TextField layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="285.0" promptText="Agregar juagador" AnchorPane.bottomAnchor="477.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="14.0" />
                   <Button layoutX="299.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="AGregar" AnchorPane.bottomAnchor="477.0" AnchorPane.leftAnchor="299.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="14.0" />
                </children>
             </AnchorPane>
