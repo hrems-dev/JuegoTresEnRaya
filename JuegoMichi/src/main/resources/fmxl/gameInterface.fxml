@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="530.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameInterface">
+   <children>
+      <SplitPane dividerPositions="0.4836683417085427" layoutX="-2.0" prefHeight="518.0" prefWidth="798.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="499.0" prefWidth="385.0">
+               <children>
+                  <TableView layoutX="14.0" layoutY="14.0" prefHeight="498.0" prefWidth="364.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="80.0">
+                    <columns>
+                      <TableColumn prefWidth="85.0" text="C1" />
+                      <TableColumn prefWidth="286.0" text="C2" />
+                    </columns>
+                  </TableView>
+                  <TextField layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="285.0" AnchorPane.bottomAnchor="477.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="14.0" />
+                  <Button layoutX="299.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="AGregar" AnchorPane.bottomAnchor="477.0" AnchorPane.leftAnchor="299.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="14.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="188.0" prefWidth="267.0">
+               <children>
+                  <Line endX="207.0" layoutX="171.0" layoutY="197.0" startX="-116.0" />
+                  <Line endX="243.0" layoutX="133.0" layoutY="311.0" startX="-100.0" />
+                  <Line endX="-100.0" endY="-134.0" layoutX="224.0" layoutY="233.0" startX="-38.0" startY="183.0" />
+                  <Line endX="-100.0" endY="-134.0" layoutX="338.0" layoutY="224.0" startX="-38.0" startY="183.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="44.0" layoutY="115.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                     <font>
+                        <Font size="53.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="147.0" layoutY="115.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                     <font>
+                        <Font size="53.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="261.0" layoutY="115.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                     <font>
+                        <Font size="53.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="219.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                     <font>
+                        <Font size="53.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="165.0" layoutY="219.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                     <font>
+                        <Font size="53.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="289.0" layoutY="219.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                     <font>
+                        <Font size="53.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="321.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                     <font>
+                        <Font size="53.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="321.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                     <font>
+                        <Font size="53.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="307.0" layoutY="321.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                     <font>
+                        <Font size="53.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
