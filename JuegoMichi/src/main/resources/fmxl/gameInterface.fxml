@@ -1,89 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="530.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameInterface">
+<AnchorPane prefHeight="530.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.JuegoMichi.control.controlGame">
    <children>
       <SplitPane dividerPositions="0.4836683417085427" layoutX="-2.0" prefHeight="518.0" prefWidth="798.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="499.0" prefWidth="385.0">
                <children>
-                  <TableView layoutX="14.0" layoutY="14.0" prefHeight="498.0" prefWidth="364.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="80.0">
+                  <TableView fx:id="tableview" layoutX="14.0" layoutY="14.0" prefHeight="498.0" prefWidth="364.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="80.0">
                     <columns>
-                      <TableColumn prefWidth="85.0" text="C1" />
-                      <TableColumn prefWidth="286.0" text="C2" />
+                      <TableColumn fx:id="partidax" prefWidth="85.0" text="C1" />
+                      <TableColumn fx:id="jugadorx" prefWidth="286.0" text="C2" />
                     </columns>
                   </TableView>
-                  <TextField layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="285.0" promptText="Agregar juagador" AnchorPane.bottomAnchor="477.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="14.0" />
-                  <Button layoutX="299.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="AGregar" AnchorPane.bottomAnchor="477.0" AnchorPane.leftAnchor="299.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="14.0" />
+                  <TextField fx:id="txtJugador" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="285.0" promptText="Agregar juagador" AnchorPane.bottomAnchor="477.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="14.0" />
+                  <Button fx:id="btnAgregar" layoutX="299.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="AGregar" AnchorPane.bottomAnchor="477.0" AnchorPane.leftAnchor="299.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="14.0" />
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="188.0" prefWidth="267.0">
+          <AnchorPane fx:id="panelJuego" minHeight="0.0" minWidth="0.0" prefHeight="188.0" prefWidth="267.0">
                <children>
                   <Line endX="207.0" layoutX="171.0" layoutY="197.0" startX="-116.0" />
                   <Line endX="243.0" layoutX="133.0" layoutY="311.0" startX="-100.0" />
                   <Line endX="-100.0" endY="-134.0" layoutX="224.0" layoutY="233.0" startX="-38.0" startY="183.0" />
                   <Line endX="-100.0" endY="-134.0" layoutX="338.0" layoutY="224.0" startX="-38.0" startY="183.0" />
-                  <Label fx:id="val1" alignment="CENTER" contentDisplay="CENTER" layoutX="44.0" layoutY="115.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                  <Label fx:id="val1" accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="44.0" layoutY="115.0" onMouseClicked="#controlClick" prefHeight="78.0" prefWidth="80.0" textOverrun="CLIP">
                      <font>
                         <Font size="53.0" />
                      </font>
                   </Label>
-                  <Label fx:id="val2" alignment="CENTER" contentDisplay="CENTER" layoutX="147.0" layoutY="115.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                  <Label fx:id="val2" accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="147.0" layoutY="115.0" onMouseClicked="#controlClick" prefHeight="78.0" prefWidth="80.0" textOverrun="CLIP">
+                     <font>
+                        <Font size="53.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="val3" accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="261.0" layoutY="115.0" onMouseClicked="#controlClick" prefHeight="78.0" prefWidth="80.0" textOverrun="CLIP">
                      <font>
                         <Font size="53.0" />
                      </font>
                   </Label>
-                  <Label fx:id="val3" alignment="CENTER" contentDisplay="CENTER" layoutX="261.0" layoutY="115.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                  <Label fx:id="val4" accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="219.0" prefHeight="78.0" prefWidth="80.0" textOverrun="CLIP">
+                     <font>
+                        <Font size="53.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="val5" accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="165.0" layoutY="219.0" prefHeight="78.0" prefWidth="80.0" textOverrun="CLIP">
                      <font>
                         <Font size="53.0" />
                      </font>
                   </Label>
-                  <Label fx:id="val4" alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="219.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                  <Label fx:id="val6" accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="289.0" layoutY="219.0" prefHeight="78.0" prefWidth="80.0" textOverrun="CLIP">
                      <font>
                         <Font size="53.0" />
                      </font>
                   </Label>
-                  <Label fx:id="val5" alignment="CENTER" contentDisplay="CENTER" layoutX="165.0" layoutY="219.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                  <Label fx:id="val7" accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="321.0" prefHeight="78.0" prefWidth="80.0" textOverrun="CLIP">
                      <font>
                         <Font size="53.0" />
                      </font>
                   </Label>
-                  <Label fx:id="val6" alignment="CENTER" contentDisplay="CENTER" layoutX="289.0" layoutY="219.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                  <Label fx:id="val8" accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="321.0" prefHeight="78.0" prefWidth="80.0" textOverrun="CLIP">
                      <font>
                         <Font size="53.0" />
                      </font>
                   </Label>
-                  <Label fx:id="val7" alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="321.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
+                  <Label fx:id="val9" accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="307.0" layoutY="321.0" prefHeight="78.0" prefWidth="80.0" textOverrun="CLIP">
                      <font>
                         <Font size="53.0" />
                      </font>
                   </Label>
-                  <Label fx:id="val8" alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="321.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
-                     <font>
-                        <Font size="53.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="val9" alignment="CENTER" contentDisplay="CENTER" layoutX="307.0" layoutY="321.0" prefHeight="78.0" prefWidth="80.0" text="-" textOverrun="CLIP">
-                     <font>
-                        <Font size="53.0" />
-                     </font>
-                  </Label>
-                  <Button layoutX="20.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Inicar con el Juego!" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="454.0" prefHeight="45.0" prefWidth="398.0" text="Label" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="466.0">
+                  <Button fx:id="btnIniciar" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Inicar con el Juego!" />
+                  <Label fx:id="lblJugador" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="454.0" prefHeight="45.0" prefWidth="398.0" text="Jugador 1" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="466.0">
                      <font>
                         <Font name="JetBrains Mono Regular" size="24.0" />
                      </font>
                   </Label>
+                  <Button fx:id="btnval1" layoutX="44.0" layoutY="93.0" mnemonicParsing="false" onAction="#controlClick" opacity="0.0" prefHeight="102.0" prefWidth="98.0" text="Button" />
+                  <Button fx:id="btnval2" layoutX="144.0" layoutY="96.0" mnemonicParsing="false" onAction="#controlClick" opacity="0.0" prefHeight="102.0" prefWidth="98.0" text="Button" />
+                  <Button fx:id="btnval3" layoutX="258.0" layoutY="96.0" mnemonicParsing="false" onAction="#controlClick" opacity="0.0" prefHeight="102.0" prefWidth="98.0" text="Button" />
+                  <Button fx:id="btnval4" layoutX="61.0" layoutY="207.0" mnemonicParsing="false" onAction="#controlClick" opacity="0.0" prefHeight="102.0" prefWidth="98.0" text="Button" />
+                  <Button fx:id="btnval5" layoutX="171.0" layoutY="207.0" mnemonicParsing="false" onAction="#controlClick" opacity="0.0" prefHeight="102.0" prefWidth="98.0" text="Button" />
+                  <Button fx:id="btnval6" layoutX="285.0" layoutY="207.0" mnemonicParsing="false" onAction="#controlClick" opacity="0.0" prefHeight="102.0" prefWidth="98.0" text="Button" />
+                  <Button fx:id="btnval7" layoutX="63.0" layoutY="313.0" mnemonicParsing="false" onAction="#controlClick" opacity="0.0" prefHeight="102.0" prefWidth="98.0" text="Button" />
+                  <Button fx:id="btnval8" layoutX="173.0" layoutY="313.0" mnemonicParsing="false" onAction="#controlClick" opacity="0.0" prefHeight="102.0" prefWidth="98.0" text="Button" />
+                  <Button fx:id="btnval9" layoutX="287.0" layoutY="313.0" mnemonicParsing="false" onAction="#controlClick" opacity="0.0" prefHeight="102.0" prefWidth="98.0" text="Button" />
                </children>
             </AnchorPane>
         </items>

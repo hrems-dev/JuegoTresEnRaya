@@ -12,7 +12,7 @@
 	<artifactId>JuegoMichi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>juegomichi</name>
-	<description>juegoDelMichi</description>
+	<description>juegoDelMichi hermesChambilla</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -79,6 +79,12 @@
 			<version>0.4.0</version>
 
 		</dependency>
+		<dependency>
+			<groupId>org.jetbrains</groupId>
+			<artifactId>annotations</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -86,6 +92,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>pe.edu.upeu.JuegoMichi.Application</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
